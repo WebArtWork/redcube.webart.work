@@ -91,18 +91,27 @@
       .mobile-sticky{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;left:0;right:0;background:#fff;padding:9px;gap:8px;z-index:40;border-top:1px solid var(--line)}
       .mobile-sticky a{text-align:center;padding:11px;font-weight:700}.mobile-sticky a:first-child{background:var(--red);color:#fff}.mobile-sticky a:last-child{background:var(--stone);color:var(--graphite)}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.reveal-item{opacity:1;transform:none;transition:none}.btn{transition:none}.hero-media{transform:none!important}.room img,.gallery figure img,.feature-media img{transition:none}}
+    .request-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:start}.request-phone{display:inline-block;margin-top:22px;font:700 clamp(1.4rem,2.6vw,1.9rem) var(--serif);color:var(--red)}
+    .request-form{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 14px;padding:32px;background:var(--stone);border-top:4px solid var(--red)}
+    .field{display:grid;gap:6px;align-content:start;min-width:0;font:600 .8rem var(--serif);letter-spacing:.02em}.field.full{grid-column:1/-1}.field small{font:400 .78rem var(--sans);color:var(--muted)}
+    .field input,.field select,.field textarea{width:100%;min-width:0;min-height:50px;padding:11px 14px;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--graphite);font:400 1rem var(--sans)}
+    .field textarea{min-height:110px;resize:vertical}.field textarea:focus-visible{outline:3px solid var(--red);outline-offset:3px}.field [aria-invalid=true]{border-color:var(--red);border-width:2px}
+    [data-error-for]{font:600 .8rem var(--sans);color:var(--burgundy)}[data-error-for]:empty{display:none}.trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+    .request-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:14px}.request-foot .btn[disabled]{opacity:.6;cursor:wait;transform:none}.request-note{flex:1;min-width:200px;margin:0;color:var(--muted);font-size:.8rem}
+    [data-status]{grid-column:1/-1;margin:0;padding:14px 16px;border-left:4px solid var(--graphite);background:#fff;font-size:.92rem}[data-status]:empty{display:none}[data-status][data-state=error]{border-left-color:var(--red)}[data-status] a{font-weight:700;text-decoration:underline}
+    @media(max-width:960px){.request-grid{grid-template-columns:minmax(0,1fr);gap:32px}}@media(max-width:600px){.request-form{grid-template-columns:minmax(0,1fr);padding:22px 16px}}
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Hotel","name":"Red Cube Hotel","image":"https://redcube.webart.work/images/hero.jpg","address":{"@type":"PostalAddress","streetAddress":"вул. В’ячеслава Чорновола, 9Б","addressLocality":"Кам’янець-Подільський","addressCountry":"UA"},"telephone":"+380985378717","url":"https://redcube.webart.work/","amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Free Wi-Fi","value":true},{"@type":"LocationFeatureSpecification","name":"24-hour front desk","value":true},{"@type":"LocationFeatureSpecification","name":"Family rooms","value":true},{"@type":"LocationFeatureSpecification","name":"Elevator","value":true},{"@type":"LocationFeatureSpecification","name":"Private parking (paid, off-site)","value":true}]}</script>
 </head>
 <body>
   <a class="skip" href="#top">До основного вмісту</a>
-  <header><div class="wrap header-in"><a class="brand" href="#top"><span class="cube"></span><div><strong>RED CUBE HOTEL</strong><small>Кам’янець-Подільський</small></div></a><nav id="nav" class="nav" aria-label="Основна навігація"><a href="#about">Про готель</a><a href="#rooms">Номери</a><a href="#family">Family Rooms</a><a href="#parking">Паркування</a><a href="#gallery">Галерея</a><a href="#contacts">Контакти</a></nav><a class="phone" href="tel:+380985378717">+38 098 537 87 17</a><a class="btn primary" href="#booking">Перевірити проживання</a></div></header>
+  <header><div class="wrap header-in"><a class="brand" href="#top"><span class="cube"></span><div><strong>RED CUBE HOTEL</strong><small>Кам’янець-Подільський</small></div></a><nav id="nav" class="nav" aria-label="Основна навігація"><a href="#about">Про готель</a><a href="#rooms">Номери</a><a href="#family">Family Rooms</a><a href="#parking">Паркування</a><a href="#gallery">Галерея</a><a href="#contacts">Контакти</a></nav><a class="phone" href="tel:+380985378717">+38 098 537 87 17</a><a class="btn primary" href="#stay-request">Перевірити проживання</a></div></header>
   <main id="top">
     <section class="hero"><div class="hero-media"><video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="images/hero.jpg"><source src="hero-bg.mp4" type="video/mp4"></video></div><div class="wrap hero-content"><span class="eyebrow">Сучасне проживання · Кам’янець-Подільський</span><h1>Red Cube Hotel</h1><h2>Простий комфорт для вашої поїздки</h2><p>Wi-Fi, сімейні номери, цілодобова рецепція, ліфт та платна парковка (не на території).</p><div class="rating-chip"><b>9.3</b><span>Booking.com</span></div><div class="actions"><a class="btn primary" href="#rooms">Переглянути номери</a><a class="btn" style="border-color:#fff;color:#fff" href="tel:+380985378717">Зателефонувати</a></div><div class="hero-address"><span>вул. В’ячеслава Чорновола, 9Б</span><small>у джерелі також зазначена попередня назва, Першотравнева</small><a href="https://www.google.com/maps/search/?api=1&query=Red+Cube+Hotel,+вул.+Вячеслава+Чорновола+9Б,+Кам’янець-Подільський" target="_blank" rel="noopener">Показати на карті →</a></div></div><span class="image-note">Ілюстративне зображення</span></section>
     <section class="facts"><div class="wrap facts-grid"><div class="fact"><b>9.3 Booking.com</b><span>Перевірений рейтинг</span></div><div class="fact"><b>Безкоштовний Wi-Fi</b><span>Перевірено</span></div><div class="fact"><b>Сімейні номери</b><span>Перевірено</span></div><div class="fact"><b>Цілодобова рецепція</b><span>Перевірено</span></div><div class="fact"><b>Ліфт</b><span>Перевірено</span></div><div class="fact"><b>Парковка</b><span>Платна, не на території</span></div></div></section>
     <section class="section" id="about"><div class="wrap about-grid"><div><span class="eyebrow">Про готель</span><h2>Готель без зайвої складності</h2><p class="lead">Red Cube Hotel пропонує проживання у Кам’янці-Подільському. Підтверджені зручності формують зрозумілий практичний міський готель, без позиціонування як «люкс», «історичний» чи «спа», якого дані не підтверджують.</p><a class="btn primary" href="#rooms">Переглянути номери</a></div><div class="about-list"><div>Безкоштовний Wi-Fi</div><div>Family rooms</div><div>Цілодобова рецепція</div><div>Ліфт</div><div>Платна парковка (не на території)</div></div></div></section>
     <section class="section rooms" id="rooms"><div class="wrap"><div class="rooms-head"><div><span class="eyebrow">STAY</span><h2>Оберіть свій номер</h2></div><p>Точна кількість номерів і категорії наразі не підтверджені.</p></div><div class="room-grid reveal-group"><figure class="room reveal-item"><img src="images/room-a.jpg" alt="Приклад номера, ілюстративне зображення"><figcaption class="room-tag"><strong>Приклад номера</strong><small>Категорію та ціну уточнюйте</small></figcaption></figure><figure class="room reveal-item"><img src="images/room-b.jpg" alt="Приклад іншого номера, ілюстративне зображення"><figcaption class="room-tag"><strong>Інший формат</strong><small>Категорію та ціну уточнюйте</small></figcaption></figure></div><div class="rooms-note"><strong>До публікації реальних карток потрібні:</strong> кількість номерів, категорії, місткість, ліжка, санвузли, A/C, TV та ціни.</div></div></section>
-    <section class="feature family" id="family"><div class="feature-media"><img src="images/family.jpg" alt="Сімейний номер, ілюстративне зображення"></div><div class="feature-copy"><div><span class="eyebrow">FAMILY</span><h2>Подорожуєте разом?</h2><p class="lead">Family rooms: підтверджена зручність Red Cube Hotel. Дитяче ліжечко, дитячий сніданок, стільчик для годування чи playground наразі не підтверджені й не заявляються.</p><a class="btn primary" href="#booking">Переглянути сімейні номери</a></div></div></section>
+    <section class="feature family" id="family"><div class="feature-media"><img src="images/family.jpg" alt="Сімейний номер, ілюстративне зображення"></div><div class="feature-copy"><div><span class="eyebrow">FAMILY</span><h2>Подорожуєте разом?</h2><p class="lead">Family rooms: підтверджена зручність Red Cube Hotel. Дитяче ліжечко, дитячий сніданок, стільчик для годування чи playground наразі не підтверджені й не заявляються.</p><a class="btn primary" href="#stay-request">Запитати сімейний номер</a></div></div></section>
     <section class="feature elevator" id="elevator"><div class="feature-copy"><div><span class="eyebrow">EASY ACCESS</span><h2>Ліфт у готелі</h2><p class="lead">Наявність ліфта підтверджена, це практична перевага з багажем, для family stay та для гостей старшого віку.</p><p class="fine">Наявність ліфта не означає автоматично повну wheelchair accessibility, доступні номери чи безбар’єрний вхід. Це окремі питання, які варто уточнити.</p></div></div><div class="feature-media"><img src="images/elevator.jpg" alt="Ліфт, ілюстративне зображення"></div></section>
     <section class="section reception"><div class="wrap reception-grid"><div><span class="eyebrow">24/7</span><h2>Цілодобова рецепція</h2><p class="lead">24-hour front desk підтверджено, адміністратор доступний цілодобово. Це не означає автоматично вільний час заселення: точний check-in і check-out наразі не підтверджені.</p></div><div style="border-radius:6px;overflow:hidden;min-height:280px"><img src="images/reception.jpg" alt="Рецепція, ілюстративне зображення"></div></div></section>
     <section class="section parking" id="parking"><div class="wrap parking-grid"><div><span class="eyebrow">PARK</span><h2>Приватне паркування</h2><p class="lead">Для гостей доступне private parking, зазначене у даних як платне та розташоване поза територією готелю.</p><div class="parking-warn">Паркування платне і знаходиться не безпосередньо біля готелю. Точну відстань, вартість і умови підтвердить адміністратор.</div></div><div style="border-radius:6px;overflow:hidden;min-height:280px"><img src="images/parking.jpg" alt="Паркування, ілюстративне зображення"></div></div></section>
@@ -110,11 +119,12 @@
     <section class="section location" id="contacts"><div class="wrap location-grid"><div><span class="eyebrow">Location</span><h2>Red Cube Hotel у Кам’янці-Подільському</h2><p class="lead">вул. В’ячеслава Чорновола, 9Б. У джерелі також зазначена попередня назва вулиці, Першотравнева. Без окремої перевірки маршрутів сторінка не заявляє «центр міста» чи відстань до Старого міста.</p><a class="btn dark" href="https://www.google.com/maps/search/?api=1&query=Red+Cube+Hotel,+вул.+Вячеслава+Чорновола+9Б,+Кам’янець-Подільський" target="_blank" rel="noopener">Прокласти маршрут</a></div><div class="contact-card"><span class="eyebrow">Контакти</span><h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem)">Red Cube Hotel</h2><a class="big" href="tel:+380985378717">+38 098 537 87 17</a><dl><dt>Адреса</dt><dd>вул. В’ячеслава Чорновола, 9Б, Кам’янець-Подільський</dd><dt>Email / сайт / Instagram</dt><dd>Не підтверджено</dd><dt>Графік роботи</dt><dd>Актуальний статус наразі не підтверджено, зателефонуйте, щоб уточнити</dd></dl></div></div></section>
     <section class="section" id="gallery"><div class="wrap"><span class="eyebrow">Gallery</span><h2>Подивіться Red Cube Hotel</h2><div class="gallery reveal-group"><figure class="reveal-item"><img src="images/hero.jpg" alt="Ілюстративний вигляд готелю" loading="lazy"></figure><figure class="reveal-item"><img src="images/family.jpg" alt="Ілюстративний сімейний номер" loading="lazy"></figure><figure class="reveal-item"><img src="images/room-a.jpg" alt="Ілюстративний номер" loading="lazy"></figure><figure class="reveal-item"><img src="images/parking.jpg" alt="Ілюстративне паркування" loading="lazy"></figure></div><p class="gallery-note">Зображення поки ілюстративні. Реальні фото номерів, family rooms, готелю та паркування буде додано після зйомки на місці.</p></div></section>
     <section class="section reviews"><span class="eyebrow">Guest rating</span><h2 style="font:600 clamp(1.8rem,3.5vw,2.6rem)/1.1 var(--serif);margin:.2em 0">Актуальна оцінка на Booking.com</h2><div class="rating-badge"><b>9.3</b><span>з 10</span></div><p class="reviews-fine">Кількість відгуків наразі не зафіксована, сторінка показує лише рейтинг із перевіреного джерела, без вигаданих цитат чи кількості відгуків.</p></section>
-    <section class="section booking" id="booking"><div class="wrap"><div class="contact-card" style="max-width:520px;margin:0 auto;text-align:center"><span class="eyebrow">Reservation</span><h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem)">Зв'яжіться з нами</h2><p class="lead" style="margin:0 auto 20px">Щоб уточнити доступність і забронювати номер, зателефонуйте нам напряму.</p><a class="big" href="tel:+380985378717">+38 098 537 87 17</a><dl><dt>Адреса</dt><dd>вул. В’ячеслава Чорновола, 9Б, Кам’янець-Подільський</dd></dl><a class="btn dark" href="https://www.google.com/maps/search/?api=1&query=Red+Cube+Hotel,+вул.+Вячеслава+Чорновола+9Б,+Кам’янець-Подільський" target="_blank" rel="noopener" style="margin-top:8px">Показати на карті</a></div></div></section>
-    <section class="final"><img src="images/hero.jpg" alt="Red Cube Hotel, ілюстративне зображення"><div><span class="eyebrow" style="color:#f0b3ac">Wi-Fi · Family Rooms · Elevator · 24/7</span><h2>Потрібне комфортне проживання у Кам’янці?</h2><p>Перевірте актуальну доступність Red Cube Hotel.</p><div class="actions"><a class="btn primary" href="#booking">Уточнити проживання</a><a class="btn" style="border-color:#fff;color:#fff" href="tel:+380985378717">+38 098 537 87 17</a></div><small>Booking.com · 9.3 / 10</small></div></section>
+    <section class="section booking" id="booking"><div class="wrap"><div class="contact-card" style="max-width:520px;margin:0 auto;text-align:center"><span class="eyebrow">Reservation</span><h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem)">Зв'яжіться з нами</h2><p class="lead" style="margin:0 auto 20px">Щоб уточнити доступність і забронювати номер, зателефонуйте нам напряму.</p><a class="big" href="tel:+380985378717">+38 098 537 87 17</a><dl><dt>Адреса</dt><dd>вул. В’ячеслава Чорновола, 9Б, Кам’янець-Подільський</dd></dl><a class="btn dark" href="https://www.google.com/maps/search/?api=1&query=Red+Cube+Hotel,+вул.+Вячеслава+Чорновола+9Б,+Кам’янець-Подільський" target="_blank" rel="noopener" style="margin-top:8px">Показати на карті</a> <a class="btn" href="#stay-request" style="margin-top:8px">Залишити запит</a></div></div></section>
+    <section class="section" id="stay-request"><div class="wrap request-grid"><div><span class="eyebrow">Запит на проживання</span><h2>Залиште номер, ми передзвонимо</h2><p class="lead">Вкажіть телефон і, за бажанням, дати поїздки. Адміністратор зателефонує, щоб уточнити доступність і вартість номера.</p><a class="request-phone" href="tel:+380985378717">+38 098 537 87 17</a></div><form class="request-form" data-hotelos data-form-name="Запит на проживання" novalidate><label class="field full">Телефон<small>Обов’язково, щоб ми могли передзвонити</small><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span data-error-for="phone"></span></label><label class="field">Ім’я<input name="name" type="text" autocomplete="name" maxlength="200"></label><label class="field">Гостей<input name="guests" type="number" min="1" max="50" inputmode="numeric"></label><label class="field">Дата заїзду<input name="checkIn" type="date"></label><label class="field">Дата виїзду<input name="checkOut" type="date"><span data-error-for="checkOut"></span></label><label class="field full">Побажання<textarea name="message" maxlength="5000"></textarea></label><label class="trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><div class="request-foot"><button class="btn primary" type="submit">Надіслати запит</button><p class="request-note">Номер використаємо лише для відповіді на цей запит.</p></div><p data-status role="status" aria-live="polite"></p></form></div></section>
+    <section class="final"><img src="images/hero.jpg" alt="Red Cube Hotel, ілюстративне зображення"><div><span class="eyebrow" style="color:#f0b3ac">Wi-Fi · Family Rooms · Elevator · 24/7</span><h2>Потрібне комфортне проживання у Кам’янці?</h2><p>Перевірте актуальну доступність Red Cube Hotel.</p><div class="actions"><a class="btn primary" href="#stay-request">Уточнити проживання</a><a class="btn" style="border-color:#fff;color:#fff" href="tel:+380985378717">+38 098 537 87 17</a></div><small>Booking.com · 9.3 / 10</small></div></section>
   </main>
   <footer><div class="wrap"><div class="footer-grid"><div class="footer-brand"><strong>RED CUBE HOTEL</strong><small>Кам’янець-Подільський</small></div><div class="footer-col"><b>Проживання</b><a href="#rooms">Номери</a><a href="#family">Сімейні номери</a><a href="#booking">Бронювання</a></div><div class="footer-col"><b>Комфорт</b><a href="#about">Безкоштовний Wi-Fi</a><a href="#elevator">Ліфт</a><a href="#contacts">Цілодобова рецепція</a></div><div class="footer-col"><b>Інформація</b><a href="#parking">Парковка</a><a href="#gallery">Галерея</a><a href="#contacts">Карта й контакти</a></div></div><div class="footer-bottom"><span>вул. В’ячеслава Чорновола, 9Б · Кам’янець-Подільський</span><span>+38 098 537 87 17</span></div></div></footer>
-  <div class="mobile-sticky"><a href="tel:+380985378717">Подзвонити</a><a href="#booking">Запитати номер</a></div>
+  <div class="mobile-sticky"><a href="tel:+380985378717">Подзвонити</a><a href="#stay-request">Запитати номер</a></div>
   <script>
     const nav=document.querySelector('.nav');
     const observer=new IntersectionObserver(entries=>entries.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.1});document.querySelectorAll('.reveal,.reveal-group').forEach(el=>observer.observe(el));
@@ -139,5 +149,152 @@
       navSections.forEach(s=>io.observe(s));
     }
   </script>
+<script type="module">
+// HotelOS site forms. Paste this whole block into the site's index.html as an inline module
+// script right before the closing body tag, and set the three constants below. Never put a
+// literal closing script tag inside this file: it would end the inline script early.
+// Contract (hotelos.webart.work/CRM.md → Submission data contract, firestore.rules):
+// - every form is <form data-hotelos data-form-name="…" novalidate> inside a <section id="{formId}">;
+//   the section id IS the formId (stable slug, e.g. stay-request, sauna-request) and the CRM
+//   links to SITE + '#' + formId, so the link scrolls to the start of that section;
+// - fields are matched by name: phone (required), name, email, message, checkIn, checkOut, guests,
+//   roomType, date, time, service; a [data-genders] box renders one select per guest (hostels);
+// - errors go to [data-error-for="<name>"], the result to [data-status]; `website` is a honeypot.
+const HOTEL_ID = 'kp-redcube'; // Firestore hotels/{id}: 'kp-' + site folder name
+const SITE = 'https://redcube.webart.work/'; // from the site's CNAME
+const PHONE = '+38 098 537 87 17'; // shown when sending fails
+
+const FIREBASE = {
+	apiKey: 'AIzaSyBeSB5EuC4BBSpmCGA3Pjk7dD_JV2SdcSQ',
+	authDomain: 'hotel-upwork.firebaseapp.com',
+	projectId: 'hotel-upwork',
+	appId: '1:40129364672:web:c9659550ebf0f1d8a36325',
+};
+const SDK = 'https://www.gstatic.com/firebasejs/12.19.0/';
+const TEXT_FIELDS = ['name', 'email', 'message', 'checkIn', 'checkOut', 'date', 'time', 'roomType', 'service'];
+const today = new Date(Date.now() - new Date().getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+
+let db;
+async function firestore() {
+	if (db) return db;
+	// Loaded on first submit only, so the page itself stays light.
+	const [{ initializeApp }, lite] = await Promise.all([import(SDK + 'firebase-app.js'), import(SDK + 'firebase-firestore-lite.js')]);
+	db = { lite, store: lite.getFirestore(initializeApp(FIREBASE)) };
+	return db;
+}
+
+function setup(form) {
+	const formId = form.closest('section[id]')?.id;
+	if (!formId) return console.error('HotelOS form needs a parent <section id="formId">', form);
+	const field = (name) => form.elements.namedItem(name);
+	const statusEl = form.querySelector('[data-status]');
+	const submit = form.querySelector('[type=submit]');
+	const submitLabel = submit.textContent;
+	const gendersBox = form.querySelector('[data-genders]');
+
+	for (const name of ['checkIn', 'checkOut', 'date']) if (field(name)) field(name).min = today;
+	if (field('checkIn') && field('checkOut')) {
+		field('checkIn').addEventListener('change', () => {
+			const checkIn = field('checkIn').value;
+			field('checkOut').min = checkIn || today;
+			if (field('checkOut').value && field('checkOut').value <= checkIn) field('checkOut').value = '';
+		});
+	}
+
+	// Hostels: one gender select per guest, kept in sync with the guests count.
+	function renderGenders() {
+		if (!gendersBox) return;
+		const count = Math.min(Math.max(parseInt(field('guests')?.value, 10) || 1, 1), 20);
+		const current = [...gendersBox.querySelectorAll('select')].map((select) => select.value);
+		gendersBox.replaceChildren(
+			...Array.from({ length: count }, (_, i) => {
+				const label = document.createElement('label');
+				label.textContent = `Гість ${i + 1}`;
+				const select = document.createElement('select');
+				select.name = 'gender';
+				select.required = true;
+				select.innerHTML = '<option value="">Стать</option><option value="female">Жінка</option><option value="male">Чоловік</option>';
+				select.value = current[i] ?? '';
+				label.append(select);
+				return label;
+			}),
+		);
+	}
+	if (gendersBox) {
+		field('guests')?.addEventListener('input', renderGenders);
+		renderGenders();
+	}
+
+	function setError(name, text) {
+		const input = field(name);
+		if (input instanceof Element) input.setAttribute('aria-invalid', text ? 'true' : 'false');
+		const slot = form.querySelector(`[data-error-for="${name}"]`);
+		if (slot) slot.textContent = text;
+	}
+
+	function showStatus(state, html) {
+		statusEl.dataset.state = state;
+		statusEl.innerHTML = html;
+	}
+
+	form.addEventListener('submit', async (event) => {
+		event.preventDefault();
+		showStatus('', '');
+		const phone = field('phone').value.trim();
+		const digits = phone.replace(/\D/g, '');
+		setError('phone', digits.length < 9 || digits.length > 15 ? 'Вкажіть номер телефону, щоб ми могли передзвонити.' : '');
+		if (field('checkIn') && field('checkOut')) {
+			const { value: checkIn } = field('checkIn');
+			const { value: checkOut } = field('checkOut');
+			setError('checkOut', checkIn && checkOut && checkOut <= checkIn ? 'Дата виїзду має бути пізніше за дату заїзду.' : '');
+		}
+		const genderSelects = gendersBox ? [...gendersBox.querySelectorAll('select')] : [];
+		if (gendersBox) {
+			const missing = genderSelects.some((select) => !select.value);
+			for (const select of genderSelects) select.setAttribute('aria-invalid', missing && !select.value ? 'true' : 'false');
+			const slot = form.querySelector('[data-error-for="genders"]');
+			if (slot) slot.textContent = missing ? 'Вкажіть стать кожного гостя, щоб ми підібрали місця.' : '';
+		}
+		const invalid = form.querySelector('[aria-invalid=true]');
+		if (invalid) return invalid.focus();
+
+		const thanks = `Дякуємо! Ми зателефонуємо на ${phone.replace(/</g, '')} найближчим часом.`;
+		// Bots fill the hidden field: pretend success, send nothing.
+		if (field('website')?.value) {
+			form.reset();
+			renderGenders();
+			return showStatus('ok', thanks);
+		}
+
+		const lead = { phone, formId, formName: form.dataset.formName, site: SITE, hotelId: HOTEL_ID };
+		for (const name of TEXT_FIELDS) {
+			const value = field(name)?.value?.trim();
+			if (value) lead[name] = value;
+		}
+		const guests = parseInt(field('guests')?.value, 10);
+		if (guests >= 1 && guests <= 50) lead.guests = guests;
+		if (genderSelects.length) lead.genders = genderSelects.map((select) => select.value);
+
+		submit.disabled = true;
+		submit.textContent = 'Надсилаємо…';
+		try {
+			const { lite, store } = await firestore();
+			await lite.addDoc(lite.collection(store, 'submissions'), { ...lead, status: 'new', history: [], createdAt: lite.serverTimestamp() });
+			form.reset();
+			if (field('checkOut')) field('checkOut').min = today;
+			renderGenders();
+			showStatus('ok', thanks);
+		} catch (error) {
+			console.error(error);
+			showStatus('error', `Не вдалося надіслати запит. Зателефонуйте нам: <a href="tel:${PHONE.replace(/[^\d+]/g, '')}">${PHONE}</a>.`);
+		} finally {
+			submit.disabled = false;
+			submit.textContent = submitLabel;
+		}
+	});
+}
+
+document.querySelectorAll('form[data-hotelos]').forEach(setup);
+</script>
 </body>
 </html>
